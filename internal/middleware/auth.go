@@ -29,5 +29,6 @@ func TelegramAuthMiddleware() gin.HandlerFunc {
 		}
 		c.Set("tma", value.User)
 		c.Next()
+
 	}
 }

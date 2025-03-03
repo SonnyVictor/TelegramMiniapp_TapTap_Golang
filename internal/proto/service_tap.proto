@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package pb;
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "tap.proto";
+option go_package = "github.com/sonnyvictok/miniapp_taptoearn/internal/pb";
+
+service TapService {
+    rpc ClickToEarn(ClickToEarnRequest) returns (ClickToEarnResponse){
+        option (google.api.http) = {
+            post: "/v1/click-to-earn"
+            body: "*"
+        };  
+    }
+    rpc GetUser(GetUserRequest) returns (GetUserResponse){
+        option (google.api.http) = {
+            get: "/v1/user"
+        };  
+    }
+}

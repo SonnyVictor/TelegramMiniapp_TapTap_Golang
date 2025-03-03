@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/api/annotations.proto";
+option go_package = "github.com/sonnyvictok/miniapp_taptoearn/internal/pb";
+
+message ClickToEarnRequest {
+}
+
+message ClickToEarnResponse {
+    string user_name = 1;
+    int32 user_id = 2;
+    int32 score = 3;
+}
+
+message GetUserRequest {
+
+}
+
+message GetUserResponse {
+    string user_name = 1;
+    int32 user_id = 2;
+    int32 score = 3;
+}
+
